@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'compagnon-light';
+    src: url('../fonts/compagnon/Light.woff2') format('woff2'),
+         url('../fonts/compagnon/Light.woff') format('woff');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'compagnon-italic';
+    src: url('../fonts/compagnon/Italic.woff2') format('woff2'),
+         url('../fonts/compagnon/Italic.woff') format('woff');
+    font-weight: italic;
+}
+
+@font-face {
+    font-family: 'compagnon-roman';
+    src: url('../fonts/compagnon/Roman.woff2') format('woff2'),
+         url('../fonts/compagnon/Roman.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'compagnon-medium';
+    src: url('../fonts/compagnon/Medium.woff2') format('woff2'),
+         url('../fonts/compagnon/Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'compagnon-bold';
+    src: url('../fonts/compagnon/Bold.woff2') format('woff2'),
+         url('../fonts/compagnon/Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'louise';
+    src: url('../fonts/louise/Louise-Regular.otf') format('woff2'),
+         url('../fonts/louise/Louise-Regular.woff2') format('woff2'),
+         url('../fonts/louise/Louise-Regular.woff') format('woff');
+}
