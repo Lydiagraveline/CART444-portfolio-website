@@ -114,28 +114,6 @@
         `;
         artDetails.style.display = 'block';
 
-// Check if the art piece has multiple images in the gallery
-if (artPiece.gallery && artPiece.gallery.length > 0) {
-    // Create a div to contain additional images
-    var imageGallery = document.createElement('div');
-    imageGallery.classList.add('image-gallery');
-
-    // Iterate through each image in the gallery
-    artPiece.gallery.forEach(function(image) {
-        // Create an image element for each image in the gallery
-        var img = document.createElement('img');
-        img.src = "media/" + image; // Assuming all images are jpg
-        img.alt = artPiece.title;
-
-        // Append each image to the image gallery
-        imageGallery.appendChild(img);
-    });
-
-    // Append the image gallery to the article div
-    var wrapper = document.querySelector('.img-wrapper');
-    wrapper.appendChild(imageGallery);
-}
-
         // back button
         var backButton = document.createElement('button');
         backButton.textContent = 'Back';
@@ -151,8 +129,6 @@ if (artPiece.gallery && artPiece.gallery.length > 0) {
     // Append the back button to the artDetails div
     artDetails.appendChild(backButton);
     }
-
-
 
     // Call the function when the page is loaded
     window.onload = fetchArtPieces;
