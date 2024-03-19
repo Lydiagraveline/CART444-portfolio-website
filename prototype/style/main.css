@@ -105,6 +105,34 @@ header, footer, article, aside {
     /* padding: 1em; */
 }
 
+article {
+    /* background: yellow; */
+    height: 80vh;
+    overflow: hidden;
+   
+}
+
+.img-wrapper {
+    margin: 20px;
+    /* background: yellowgreen; */
+    height: 100%;
+    /* max-width: 100%; */
+    display: flex;
+    justify-content: center;
+    /* object-fit: contain;
+    object-position: center; */
+}
+
+article img {
+    height: auto;
+    max-width: 100%;
+    /* max-height: 50%; */
+}
+
+.portfolio-item:hover{
+color: var(--purple2);
+}
+
 
 /* col-2 aka menu contnent */
 .menu{

@@ -17,14 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//menu buttons
-// function handleClick(button) {
-//     console.log("You clicked button " + button);
-//     if (button === 1) {
-//         window.location.href = "portfolio.html";
-//     }
-//     // You can perform other actions here based on the clicked section
-//   }
+
+// function updateImage(){
+//     var portfolioItem = document.getElementsByClassName("portfolio-item")
+// }
+
+function changeImg(imgurl){
+    let url = "media/" + imgurl
+    document.getElementById("previewImg").src=url;//"media/painting2.jpeg";
+}
 
 
 // Handle the header letter stretching
