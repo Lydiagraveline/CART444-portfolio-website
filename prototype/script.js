@@ -46,3 +46,6 @@ updateScaling();
 window.addEventListener('resize', function() {
     updateScaling(); // Call the function whenever the window is resized
 });
+
+
+ 

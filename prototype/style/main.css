@@ -69,7 +69,7 @@ a {
 
 .content > article {
     flex: 3;
-    min-height: 60vh;
+    /* min-height: 60vh; */
 }
 .content > aside {
     /* background: beige; */
@@ -107,8 +107,8 @@ header, footer, article, aside {
 
 article {
     /* background: yellow; */
-    height: 80vh;
-    overflow: hidden;
+    min-height: 80vh;
+    /* overflow: hidden; */
    
 }
 
@@ -118,6 +118,7 @@ article {
     height: 100%;
     /* max-width: 100%; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     /* object-fit: contain;
     object-position: center; */
@@ -129,9 +130,7 @@ article img {
     /* max-height: 50%; */
 }
 
-.portfolio-item:hover{
-color: var(--purple2);
-}
+
 
 
 /* col-2 aka menu contnent */
@@ -145,16 +144,6 @@ color: var(--purple2);
     /* position: relative; */
 }
 
-.menu.portfolio {
-    padding: 1em;
-    background: var(--light3);
-    border-left: 1.5px solid var(--dark4);
-}
-
-.menu.list {
-     border: 1.5px solid var(--dark4);
-     
-}
 
 .menu p {
     font-size: 18px;
@@ -163,19 +152,10 @@ color: var(--purple2);
     font-family: compagnon-light, sans-serif;
 }
 
-.menu .heading{
-    margin: 0;
-       color: var(--dark3);
-    /* border: 1.5px solid var(--dark4); */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
 
-.menu-btn {
+.menu .btn {
     padding: 1em;
-    /* padding-top: 2em; */
+    padding-top: 30px;
     background: var(--light3);
     border-left: 1.5px solid var(--dark4);
     /* border-right: 1.5px solid var(--dark4); */
@@ -186,21 +166,76 @@ color: var(--purple2);
     transition: background-color 0.3s ease;
 }
 
-
-
-
-.menu-btn:hover{
+.menu .btn:hover{
     background: var(--light4);
 }
+
+.menu.portfolio {
+    background: var(--light3);
+    border-left: 1.5px solid var(--dark4);
+}
+
+.portfolio div{
+    padding: 1em;
+    flex: 1;
+}
+
+.portfolio .heading{
+    margin: 0;
+    padding-top: 30px;
+    color: var(--dark3);
+    border-bottom: 1.5px solid var(--dark4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    /* width: 100%; */
+}
+
+.portfolio .artList{
+    background: var(--purple1);
+    flex: 10;
+}
+
+.portfolio .artDetails{
+    background: var(--purple1);
+    flex: 10;
+}
+
+.portfolio .index {
+    background: var(--purple1);
+    border-top: 1.5px solid var(--dark4);
+    flex: 2;
+}
+
+.portfolio-item:hover{
+    color: var(--purple2);
+}
+
+
+
 
  /* Media Query for small screens */
  @media (max-width: 768px) {
     body {
       flex-direction: column; /* display col-1 at the bottom */
+      max-height: 100vh;
+      /* overflow-y: hidden; */
     }
 
+    .col-1 {
+        flex: 1;
+        /* height: 10vh; */
+    }
+
+
     .col-2 {
+        /* height: 50vh; */
         width: 100%; /* Set col-2 width to 100% for small screens */
+    }
+
+    .article {
+        /* height: 30vh; */
     }
 
     .menu {

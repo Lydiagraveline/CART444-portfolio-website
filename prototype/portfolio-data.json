@@ -1,0 +1,30 @@
+{
+    "art_pieces": [
+      {
+        "type": "analog",
+        "medium": "painting",
+        "title": "Lily",
+        "year": 2023,
+        "dimensions": "16 x 24",
+        "description": "Oil on canvas",
+        "image_url": "painting1.png"
+      },
+      {
+        "type": "analog",
+        "medium": "painting",
+        "title": "String Figure",
+        "year": 2023,
+        "description": "Oil on canvas",
+        "image_url": "painting2.jpeg"
+      },
+      {
+        "type": "analog",
+        "medium": "painting",
+        "title": "untitled",
+        "year": 2023,
+        "description": "Oil on canvas",
+        "image_url": "painting5.jpg",
+        "gallery": ["IMG_9932.jpeg", "IMG_9935.jpeg"]
+      }
+    ]
+  }
