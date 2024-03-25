@@ -1,3 +1,59 @@
+@font-face {
+  font-family: 'compagnon-light';
+  src: url('./fonts/compagnon/Light.woff2') format('woff2'),
+       url('./fonts/compagnon/Light.woff') format('woff');
+  font-weight: light;
+}
+
+@font-face {
+  font-family: 'compagnon-italic';
+  src: url('./fonts/compagnon/Italic.woff2') format('woff2'),
+       url('./fonts/compagnon/Italic.woff') format('woff');
+  font-weight: italic;
+}
+
+@font-face {
+  font-family: 'compagnon-roman';
+  src: url('./fonts/compagnon/Roman.woff2') format('woff2'),
+       url('./fonts/compagnon/Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'compagnon-medium';
+  src: url('./fonts/compagnon/Medium.woff2') format('woff2'),
+       url('./fonts/compagnon/Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'compagnon-bold';
+  src: url('./fonts/compagnon/Bold.woff2') format('woff2'),
+       url('./fonts/compagnon/Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'louise';
+  src: url('./fonts/louise/Louise-Regular.otf') format('woff2'),
+       url('./fonts/louise/Louise-Regular.woff2') format('woff2'),
+       url('./fonts/louise/Louise-Regular.woff') format('woff');
+}
+
+:root {
+  --light1: #FFFDFF;
+  --light2: #F4F2F5;
+  --light3: #E5E2E5;
+  --light4: #CCC7CD;
+  --dark1: #9D9E97;
+  --dark2: #7C7D76;
+  --dark3: #5B5C55;
+  --dark4: #31322C;
+  --dark5: #181A11;
+  --purple1: #F9D9FC;
+  --purple2: #E9BAE4;
+}
+
+
+
 /* .App {
   text-align: center;
 }
@@ -102,13 +158,30 @@
   margin: 0 auto 20px; /* Center the image horizontally and add some bottom margin */
 }
 
+/* Art piece information */
+
+.artPieceInfo h2 {
+  /* font-size: 18px; */
+  font-family: compagnon-medium, sans-serif;
+}
+
+.artPieceInfo P {
+  color: var(--dark3);
+  font-size: 18px;
+  font-family: compagnon-medium, sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+
 /* Close button */
-/* .modalContent button {
-  border: none;
+.modalContent button {
+  margin-top: 16px;
+  /* border: none;
   background-color: transparent;
   color: #333;
   cursor: pointer;
   font-size: 16px;
   padding: 8px 16px;
-  margin-top: 16px;
-} */
+  margin-top: 16px; */
+}

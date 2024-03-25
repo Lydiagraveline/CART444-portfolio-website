@@ -1,53 +1,71 @@
 export const GalleryData = [
         {
-            "id": 1,
             "title": "Lily",
+            "year": 2023,
             "image": "lily.png",
             "category": "analog",
             "medium": "Oil on canvas",
-            "year": 2023,
+
             "dimensions": "16 x 24",
             "description": ""
           },
           {
-            "id": 2,
             "title": "String Figure",
+            "year": 2023,
             "image": "painting2.jpeg",
             "category": "analog",
             "medium": "Oil on canvas",
-            "year": 2023,
-            "description": "Oil on canvas"
+
           },
           {
-            "id": 3,
-            "title": "untitled",
-            "image": "painting3.jpg",
-            "category": "analog",
-            "medium": "painting",
-            "year": 2023,
-            "description": "Oil on canvas",
-            "gallery": ["IMG_9932.jpeg", "IMG_9935.jpeg"]
-          },
-          {
-            "id": 4,
-            "title": "Digital Delights",
-            "image": "digitaldelights.png",
+            "title": "Bed",
+            "image": "bed.gif",
             "category": "digital",
+            "medium": "3D scan, p5.js",
             "year": 2023
           },
           {
-            "id": 5,
-            "title": "Hinge",
-            "image": "hinge.png",
-            "category": "digital",
-            "year": 2024
+            "title": "Untitled",
+            "image": "flowerpainting.jpg",
+            "category": "analog",
+            "medium": "Oil",
+            "year": 2023
           },
           {
-            "id": 6,
+            "title": "untitled",
+            "year": 2023,
+            "image": "painting3.jpg",
+            "category": "analog",
+            "medium": "Oil on canvas",
+            "gallery": ["IMG_9932.jpeg", "IMG_9935.jpeg"]
+          },
+          {
+            "title": "still life",
+            "year": 2023,
+            "image": "painting4.jpg",
+            "category": "analog",
+            "medium": "Oil on canvas",
+          },
+          {
+            "title": "Digital Delights",
+            "year": 2023,
+            "image": "digitaldelights.png",
+            "category": "digital"
+   
+          },
+          {
+            "title": "Hinge",
+            "year": 2024,
+            "image": "hinge.png",
+            "category": "digital"
+
+          },
+          {
             "title": "Magnets",
+            "year": 2024,
             "image": "magnets.png",
-            "category": "digital",
-            "year": 2024
+            "category": "digital"
+   
           },
           {
             "title": "untitled",
@@ -56,13 +74,13 @@ export const GalleryData = [
             "medium": "screenprint",
             "year": 2020
           },
-          {
-            "title": "untitled",
-            "image": "guy.jpg",
-            "category": "analog",
-            "medium": "oil paint",
-            "year": 2020
-          },
+          // {
+          //   "title": "untitled",
+          //   "image": "guy.jpg",
+          //   "category": "analog",
+          //   "medium": "oil paint",
+          //   "year": 2020
+          // },
           {
             "title": "Traces",
             "image": "print2.jpg",
@@ -74,22 +92,8 @@ export const GalleryData = [
             "title": "Shrine",
             "image": "shrine.jpg",
             "category": "analog",
-            "medium": "Oil",
+            "medium": "Oil on canvas",
             "year": 2022
-          },
-          {
-            "title": "Untitled",
-            "image": "painting5.jpg",
-            "category": "analog",
-            "medium": "Oil",
-            "year": 2023
-          },
-          {
-            "title": "Bed",
-            "image": "bed.gif",
-            "category": "digital",
-            "medium": "3D scan, p5.js",
-            "year": 2023
           },
           {
             "title": "gif",
@@ -105,11 +109,32 @@ export const GalleryData = [
             "medium": "gif",
             "year": 2022
           },
+          // {
+          //   "title": "Permutations",
+          //   "image": "gif0.gif",
+          //   "category": "digital",
+          //   "medium": "gif",
+          //   "year": 2023
+          // },
+          // {
+          //   "title": "Source",
+          //   "image": "LaSource.jpg",
+          //   "category": "analog",
+          //   "medium": "Oil on canvas",
+          //   "year": 2020
+          // },
           {
-            "title": "Permutations",
-            "image": "gif0.gif",
-            "category": "digital",
-            "medium": "gif",
-            "year": 2023
+            "title": "Honey",
+            "image": "honey.JPG",
+            "category": "analog",
+            "medium": "Oil on canvas",
+            "year": 2020
+          },
+          {
+            "title": "Tsunami",
+            "image": "Tsunami.jpg",
+            "category": "analog",
+            "medium": "Etching",
+            "year": 2019
           },
 ]
