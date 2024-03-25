@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+// import Projects from './Projects';
 
 //import the data and sort it by year
 import { GalleryData as originalGalleryData  } from '../GalleryData'; 
@@ -12,6 +13,7 @@ export const GalleryData = sortedGalleryData();
 const Gallery = () => {
     const [data, setData] = useState([]);
     const [collection, setCollection] = useState([]);
+    const [clickedImage, setClickedImage] = useState(null);
   
     useEffect(() => {
         setData(GalleryData);
@@ -27,7 +29,18 @@ const Gallery = () => {
     }
     
     const handleImageClick = (item) => {
-        console.log('Clicked Image:', item.year);
+        // window.open(`/projects/bed`, '_blank');
+        // Check if the clicked image belongs to the "analog" category
+        if (item.category === "analog") {
+             setClickedImage(item);
+            console.log(item.category);
+        } else {
+             setClickedImage(null); // Reset clickedImage if clicked image is not from "analog" category
+        }
+    };
+
+    const closeModal = () => {
+        setClickedImage(null);
     };
   
     return (
@@ -48,6 +61,21 @@ const Gallery = () => {
                 </div>)
         }
         </div>  
+        {clickedImage && clickedImage.category === "analog" && (
+                <div className="modalBackground" onClick={closeModal}>
+                    <div className="modalContent">
+                        <img src={`../images/${clickedImage.image}`} alt={clickedImage.title} />
+                        <div className="artPieceInfo">
+                            <h2>{clickedImage.title}</h2>
+                                <p>{clickedImage.year}</p>
+                                <p>{clickedImage.medium}</p>
+                                <p>{clickedImage.dimensions}</p>
+                                <p>{clickedImage.description}</p>
+                         </div>
+                        <button onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
       </div>
     );
   };

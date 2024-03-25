@@ -3,19 +3,18 @@ export const GalleryData = [
             "id": 1,
             "title": "Lily",
             "image": "lily.png",
-
             "category": "analog",
-            "medium": "painting",
+            "medium": "Oil on canvas",
             "year": 2023,
             "dimensions": "16 x 24",
-            "description": "Oil on canvas"
+            "description": ""
           },
           {
             "id": 2,
             "title": "String Figure",
             "image": "painting2.jpeg",
             "category": "analog",
-            "medium": "painting",
+            "medium": "Oil on canvas",
             "year": 2023,
             "description": "Oil on canvas"
           },
