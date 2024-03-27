@@ -5,9 +5,7 @@ export const GalleryData = [
             "image": "lily.png",
             "category": "analog",
             "medium": "Oil on canvas",
-
             "dimensions": "16 x 24",
-            "description": ""
           },
           {
             "title": "String Figure",
@@ -15,14 +13,14 @@ export const GalleryData = [
             "image": "painting2.jpeg",
             "category": "analog",
             "medium": "Oil on canvas",
-
           },
           {
             "title": "Bed",
             "image": "bed.gif",
             "category": "digital",
-            "medium": "3D scan, p5.js",
-            "year": 2023
+            "medium": "3D scan, p5",
+            "year": 2023,
+            "link": "https://lydiagraveline.com/projects/bed/"
           },
           {
             "title": "Untitled",
@@ -47,32 +45,27 @@ export const GalleryData = [
             "medium": "Oil on canvas",
           },
           {
-            "title": "Digital Delights",
-            "year": 2023,
-            "image": "digitaldelights.png",
-            "category": "digital"
-   
-          },
-          {
             "title": "Hinge",
             "year": 2024,
             "image": "hinge.png",
-            "category": "digital"
-
+            "category": "digital",
+            "medium": "node, P5"
           },
           {
             "title": "Magnets",
             "year": 2024,
             "image": "magnets.png",
-            "category": "digital"
-   
+            "category": "digital",
+            "link": "https://magnets.fly.dev/",
+            "medium": "node, P5"
           },
           {
-            "title": "untitled",
-            "image": "print1.jpg",
-            "category": "analog",
-            "medium": "screenprint",
-            "year": 2020
+            "title": "Digital Delights",
+            "year": 2023,
+            "image": "digitaldelights.png",
+            "category": "digital",
+            "link":"https://lydiagraveline.com/projects/digitaldelights/outer.html",
+            "medium": "HTML"
           },
           // {
           //   "title": "untitled",
@@ -86,6 +79,13 @@ export const GalleryData = [
             "image": "print2.jpg",
             "category": "analog",
             "medium": "Image transfer on plexiglass",
+            "year": 2020
+          },
+          {
+            "title": "untitled",
+            "image": "print1.jpg",
+            "category": "analog",
+            "medium": "Lino print",
             "year": 2020
           },
           {

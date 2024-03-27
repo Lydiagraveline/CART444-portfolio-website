@@ -52,70 +52,46 @@
   --purple2: #E9BAE4;
 }
 
-
-
-/* .App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  overscroll-behavior: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gallery {
+  background-color: var(--light2);
+  padding: 10% 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gallery .container {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: masonry;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.galleryItem {
+  background-color: var(--light1);
+  border: solid 1.5px var(--dark3);
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
+.galleryItem p {
+  font-family: compagnon-medium;
+  font-size: 14px;
+  color: var(--dark2);
+}
 
 .galleryItem img{
-  /* background-color: brown; */
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.galleryContainer {
-  /* background-color: red; */
-  display:grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.galleryWrapper {
-  /* background-color: blue; */
-  padding: 10% 10%;
-}
-
-.filterItem ul {
+.radioContainer ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +100,60 @@
   gap: 20px;
   margin-bottom: 30px;
 }
+
+.radioContainer label {
+  font-family: compagnon-medium, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--dark3);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* hide default radio */
+input[type="radio"] {
+  display: none;
+}
+
+.radio-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--dark2);
+  position: relative;
+  margin-right: 10px;
+}
+
+.radio-circle::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio-circle::before {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--dark2);
+}
+
+.radio-button:hover .radio-circle {
+  border-color: var(--dark3);
+}
+
+.radio-button:hover input[type="radio"]:checked + .radio-circle::before {
+  background-color: var(--dark3);
+}
+
+
+
 
 
 /* Modal background */
@@ -171,6 +201,19 @@
   font-family: compagnon-medium, sans-serif;
   padding: 0px;
   margin: 0px;
+}
+
+/* Project link button */
+.projectLinkButton {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 

@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://lydiagraveline.com",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -11,6 +12,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
+    "react-photo-album": "^2.3.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
