@@ -45,11 +45,12 @@ export const GalleryData = [
             "medium": "Oil on canvas",
           },
           {
-            "title": "Hinge",
+            "title": "Data Flowers",
             "year": 2024,
-            "image": "hinge.png",
+            "image": "dataflowers.gif",
             "category": "digital",
-            "medium": "node, P5"
+            "medium": "node, P5",
+            "link": "https://data-flowers.fly.dev/"
           },
           {
             "title": "Magnets",

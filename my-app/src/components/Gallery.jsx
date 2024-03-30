@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+
 // import Projects from './Projects';
 
 //import the data and sort it by year
@@ -125,8 +126,6 @@ const Gallery = () => {
         )
         }
         </div>  
-
-  
 
         {/* pop-up */}
         {clickedImage && (
