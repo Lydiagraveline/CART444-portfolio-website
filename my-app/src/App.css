@@ -59,10 +59,63 @@
 body {
   margin: 0;
   overscroll-behavior: none;
+  background-color: var(--light2);
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1.5px solid var(--dark3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure the header is above other content */
+  font-family: compagnon-medium;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right a {
+  margin-left: 20px;
+  color: #333;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+
+/* header {
+  position: sticky;
+  top: 0;
+  display: flex; 
+  justify-content: center;
+  transform: translateX(-0.7em); 
+}
+
+header h1 {
+  margin: 0;
+  font-family: louise, sans-serif;
+  color: var(--purple2);
+  font-size: 4em;
+  white-space: nowrap;
+} */
+
+
 .gallery {
-  background-color: var(--light2);
+  /* background-color: var(--light2); */
   padding: 10% 10%;
 }
 
@@ -104,7 +157,7 @@ body {
   object-fit: cover;
 }
 
-.radioContainer ul {
+/* .radioContainer ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +178,7 @@ body {
 }
 
 /* hide default radio */
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
 }
 
@@ -163,7 +216,7 @@ input[type="radio"] {
 
 .radio-button:hover input[type="radio"]:checked + .radio-circle::before {
   background-color: var(--dark3);
-}
+} */ */
 
 /* Modal background */
 .modalBackground {

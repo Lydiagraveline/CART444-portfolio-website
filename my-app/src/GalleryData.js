@@ -75,13 +75,13 @@ export const GalleryData = [
           //   "medium": "oil paint",
           //   "year": 2020
           // },
-          {
-            "title": "Traces",
-            "image": "print2.jpg",
-            "category": "analog",
-            "medium": "Image transfer on plexiglass",
-            "year": 2020
-          },
+          // {
+          //   "title": "Traces",
+          //   "image": "print2.jpg",
+          //   "category": "analog",
+          //   "medium": "Image transfer on plexiglass",
+          //   "year": 2020
+          // },
           {
             "title": "untitled",
             "image": "print1.jpg",
@@ -124,13 +124,13 @@ export const GalleryData = [
           //   "medium": "Oil on canvas",
           //   "year": 2020
           // },
-          {
-            "title": "Honey",
-            "image": "honey.JPG",
-            "category": "analog",
-            "medium": "Oil on canvas",
-            "year": 2020
-          },
+          // {
+          //   "title": "Honey",
+          //   "image": "honey.JPG",
+          //   "category": "analog",
+          //   "medium": "Oil on canvas",
+          //   "year": 2020
+          // },
           {
             "title": "Tsunami",
             "image": "Tsunami.jpg",
