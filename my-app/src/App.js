@@ -16,7 +16,9 @@ const sortedGalleryData = () => {
 function App() {
   const [galleryData, setGalleryData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedAboutCategory, setSelectedAboutCategory] = useState('Bio');
   const [collection, setCollection] = useState([]);
+
 
   useEffect(() => {
     const sortedData = sortedGalleryData();
@@ -40,18 +42,24 @@ function App() {
     }
   };
 
+  const handleAboutChange = (category) => {
+    setSelectedAboutCategory(category);
+  };
+
   return (
     <Router>
     <Header 
       categories={['all', ...collection]}
       selectedCategory={selectedCategory}
       handleFilterChange={handleFilterChange}
+      handleAboutChange={handleAboutChange}
+      selectedAboutCategory={selectedAboutCategory}
     />
     
     <Routes>
 
       <Route path="/" element={<Gallery galleryData={galleryData} collection={collection} />} /> {/* Default route to Gallery */}
-      <Route path='/about' element={<About />} />
+      <Route path='/about' element={<About selectedCategory={selectedAboutCategory} />} />
     </Routes>
     </Router>
 

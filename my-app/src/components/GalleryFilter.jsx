@@ -12,8 +12,9 @@ const GalleryFilter = ({ categories, selectedCategory, onChange }) => {
               <input
                 type="radio"
                 value={category}
-                checked={selectedCategory === category}
+                checked={selectedCategory === category || (index === 0 && !selectedCategory)}
                 onChange={() => onChange(category)}
+                // checked
               />
               <div className="radio-circle"></div>
               <span> {category} </span>
