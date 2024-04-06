@@ -1,30 +1,95 @@
 
 //Header.jsx
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // Import Link and useLocation
 import GalleryFilter from './GalleryFilter'; // Import GalleryFilter component
 import './Radio.css';
+import classnames from "classnames";
 
 
 const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutChange, selectedAboutCategory }) => {
   const location = useLocation(); // Get the current location
+  const [isHidden, setIsHidden] = useState(true);
+  const [headerTestHeight, setHeaderTestHeight] = useState(0);
+
+  const toggleHeader = () => {
+    setIsHidden(!isHidden);
+  };
+
+  function handleScrollChange() {
+    if (window.scrollY !== 0) {
+      setIsHidden(true);
+    }
+  }
+
+  useEffect(() => {
+    const headerTestElement = document.querySelector('.headerTest');
+    if (headerTestElement) {
+      setHeaderTestHeight(headerTestElement.clientHeight);
+    }
+
+    window.addEventListener("scroll", handleScrollChange);
+    return () => {
+      window.removeEventListener("scroll", handleScrollChange);
+    };
+  }, []); // only add event listener on mount & clean on unmount
+
+  const headerStyle = {
+     top: isHidden ? 0 :  headerTestHeight 
+  };
 
   return (
-    <header className="header">
-      <div className="header-left">
-        <Link to="/">Lydia Graveline</Link>
+  //  <section className='header-wrapper'>
+    <header className="header"  style={headerStyle}>
+       {/* <p>header</p> */}
+       <div
+            className={classnames("headerTest", {
+              "header-hidden": isHidden
+            })}
+      >
+      <div className={`headerTop`}>
+      {/* <p>header top</p> */}
+        {/* <div className='containertest'> */}
+        {/* <p>containertest</p> */}
+          <div 
+              className={classnames("about-section", {
+              "header-hidden": isHidden
+            }) }>
+          <p>about-section</p>
+          <p>information about Lydia Graveline.</p>
+          <p>information about Lydia Graveline.</p>
+          <p>information about Lydia Graveline.</p>
+          <p>Contact</p>
+          </div>
+        {/* </div> */}
       </div>
-      {location.pathname === '/' && ( // Conditionally render the radio buttons only when the path is '/'
-        <div className="header-center">
+      </div>
+
+      <div className='headerBottom'>
+      <div className="header-left">
+        <div id="logo">
+        <Link to="/">Lydia Graveline</Link>
+        </div>
+        <div id="category">
+        {location.pathname === '/' && ( // Conditionally render the radio buttons only when the path is '/'
         <GalleryFilter
          categories={categories}
          selectedCategory={selectedCategory}
          onChange={handleFilterChange}
-      />
-        </div>
+        />
       )}
-        {location.pathname === '/about' && ( // Conditionally render the radio buttons only when the path is '/'=
+      {/* <button onClick={toggleHeader}>
+        {isHidden ? "Show Header" : "Hide Header"}
+      </button> */}
+      </div>
+      </div>
+      <div className="header-right">
+      <Link to="#" onClick={toggleHeader}>About</Link>
+      </div>  
+      </div>
+
+        {/* {location.pathname === '/about' && ( // Conditionally render the radio buttons only when the path is '/'=
           <div className='radioContainer'>
           <ul>
           <li>
@@ -44,11 +109,18 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
           </li>
           </ul>
          </div>
-      )}
-      <div className="header-right">
+      )} */}
+
+
+
+      {/* <div className="header-right">
         <Link to="/about">About</Link>
-      </div>
+      </div> */}
+
+
+
     </header>
+    // </section>
   );
 };
 

@@ -54,6 +54,9 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-variant-ligatures: no-common-ligatures;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -62,30 +65,178 @@ body {
   background-color: var(--light2);
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-bottom: 1.5px solid var(--dark3);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000; /* Ensure the header is above other content */
-  font-family: compagnon-medium;
+.hheader-wrapper {
+  background-color: var(--purple1);
 }
 
-.header-left h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
+.header {
+  background-color: var(--purple1);
+  flex-direction: column;
+  /* -webkit-box-pack: end; */
+  display: flex;
+  width: 100%;
+  /* height: auto; */
+  /* height: 300px; */
+  position: sticky;
+  /* top: calc(100% - 2px); */
+  top: 0;
+  z-index: 20;
+  letter-spacing: -0.03em;
+  line-height: 1em;
+  transition: top 0.6s
+}
+
+@media screen and (min-width: 32em) {
+  .header {
+    font-size: 17px;
+    margin-top: 95px;
+    border-bottom: 1.5px solid var(--dark3);
+  }
+}
+
+.headerTest {
+  background-color: blueviolet;
+  /* height: auto; */
+  /* height: 200px; */
+  width: 100%;
+  /* padding: 10px; */
+  position: fixed;
+  /* display: ; */
+  /* position: relative; */
+  top: 0;
+  transition: top 0.6s;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.header-hidden {
+  /* position: fixed; */
+  top: -300px;
+  /* display: none; */
+}
+
+
+.headerTop{
+  /* height: auto; */
+  border: 1.5px solid red;
+  background-color: #007bff;
+  /* height: 10px; */
+  /* height: 100%; */
+  /* width: 100%; */
+  /* bottom: 100%; */
+  /* position: absolute; */
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  /* padding-left: 15px;
+  padding-right: 15px;
+  letter-spacing: -0.03em;
+  line-height: 1em; */
+  /* transition: spring 0s ease 0s; */
+  padding: 10px;
+}
+
+
+@media screen and (min-width: 32em) {
+  .headerTop {
+    padding-left: 45px;
+    padding-right: 45px;
+    width: 100%;
+        /* width: 100%; */
+    /* padding-bottom: 95px; */
+    /* padding-top: 32px; */
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .headerTop {
+    padding-left: 0px;
+    margin-left: 50%;
+    width: 50%;
+    /* margin-left: 50%;
+    width: 50%; */
+  }
+}
+
+.containertest{
+  /* top: 0; */
+  /* background-color: #E5E2E5; */
+  /* border: 1.5px solid var(--dark3); */
+  /* display: block; */
+  /* flex-direction: column; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* height: auto; */
+  /* padding: 10px; */
+  }
+  
+
+.about-section{
+  /* flex-grow: 1; */
+  /* overflow: hidden; */
+  /* display: flex; */
+  border: 1.5px solid red;
+  height: auto;
+  /* width: 100%;
+  padding-bottom: 0px;
+  padding-top: 15px; */ 
+}
+
+
+@media screen and (min-width: 32em) {
+  .about-section {
+
+  }
+}
+
+
+.headerBottom {
+  border: 1.5px solid var(--dark3);
+  background-color: var(--purple1);
+  align-items: flex-end;
+  /* flex-shrink: 0; */
+  /* -webkit-box-pack: start; */
+  /* justify-content: flex-start; */
+  display: flex;
+  position: relative;
+  padding-bottom: 2px;
+  letter-spacing: -0.03em;
+  line-height: 1em;
+  pointer-events: auto;
+  /* transition: top 0.6s; */
+  /* transition: top 0.6s; */
+}
+
+@media screen and (min-width: 32em) {
+  .headerBottom {
+    /* margin-top: 95px; */
+    padding-left: 45px;
+    padding-right: 45px;
+    height: 50px;
+  }
+}
+
+.header-left{
+  /* border: 1.5px solid var(--dark3); */
+  flex-shrink: 0;
+  letter-spacing: -0.03em;
+  line-height: 1em;
+  font-family:'Times New Roman', Times, serif
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: center; */
 }
 
 .header-right {
-  display: flex;
+  /* border: 1.5px solid var(--dark3); */
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-left: 16px;
+  line-height: 1.2em;
+  letter-spacing: -0.03em;
 }
+
+
 
 .header-right a {
   margin-left: 20px;
@@ -95,6 +246,9 @@ body {
 .header a {
   text-decoration: none;
 }
+
+
+
 
 
 /* header {
