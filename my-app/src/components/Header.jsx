@@ -13,8 +13,17 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
   const [isHidden, setIsHidden] = useState(true);
   const [headerTestHeight, setHeaderTestHeight] = useState(0);
 
+  const updateHeaderHeight = () => {
+    const headerTestElement = document.querySelector('.headerTest');
+    if (headerTestElement) {
+      setHeaderTestHeight(headerTestElement.clientHeight);
+    }
+  };
+  
   const toggleHeader = () => {
     setIsHidden(!isHidden);
+     updateHeaderHeight();
+    console.log(headerTestHeight);
   };
 
   function handleScrollChange() {
@@ -24,26 +33,36 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
   }
 
   useEffect(() => {
-    const headerTestElement = document.querySelector('.headerTest');
-    if (headerTestElement) {
-      setHeaderTestHeight(headerTestElement.clientHeight);
-    }
+    updateHeaderHeight();
+      // Listen for resize events to update the height
+      window.addEventListener('resize', updateHeaderHeight);
 
     window.addEventListener("scroll", handleScrollChange);
     return () => {
       window.removeEventListener("scroll", handleScrollChange);
+      window.removeEventListener('resize', updateHeaderHeight);
     };
   }, []); // only add event listener on mount & clean on unmount
 
   const headerStyle = {
-     top: isHidden ? 0 :  headerTestHeight 
+    //  marginTop: !isHidden ? '0px' : null,
+      // top: isHidden ? 0 :  headerTestHeight 
+      transform: `translateY(${isHidden ? 0 : headerTestHeight}px)`,
+      // backgroundColor: !isHidden && window.scrollY === 0 ? 'red' : 'blue',
+      marginTop: !isHidden && window.scrollY === 0 ? `0px` : null
   };
 
+    const testStyle = {
+      // marginTop: isHidden && window.scrollY === 0 ? 0 : null
+
+  };
   return (
-  //  <section className='header-wrapper'>
-    <header className="header"  style={headerStyle}>
-       {/* <p>header</p> */}
-       <div
+    // <div className="background-container" style={headerStyle}>
+    <header style={headerStyle}        
+    className={classnames("header", {
+        "hidden": isHidden
+    })}>
+            <div       
             className={classnames("headerTest", {
               "header-hidden": isHidden
             })}
@@ -54,19 +73,23 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
         {/* <p>containertest</p> */}
           <div 
               className={classnames("about-section", {
-              "header-hidden": isHidden
+              "about-hidden": isHidden
             }) }>
           <p>about-section</p>
           <p>information about Lydia Graveline.</p>
           <p>information about Lydia Graveline.</p>
           <p>information about Lydia Graveline.</p>
           <p>Contact</p>
+          <p>Contact</p>
+          {/* <p>Contact</p> */}
           </div>
         {/* </div> */}
       </div>
       </div>
+      
+       {/* <p>header</p> */}
+      <div className='headerBottom '  >
 
-      <div className='headerBottom'>
       <div className="header-left">
         <div id="logo">
         <Link to="/">Lydia Graveline</Link>
@@ -85,7 +108,7 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
       </div>
       </div>
       <div className="header-right">
-      <Link to="#" onClick={toggleHeader}>About</Link>
+      <Link to="#" onClick={() => {toggleHeader(); updateHeaderHeight();}}>About</Link>
       </div>  
       </div>
 
@@ -120,7 +143,7 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
 
 
     </header>
-    // </section>
+    //  </div>
   );
 };
 
