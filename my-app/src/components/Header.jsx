@@ -8,7 +8,7 @@ import './Radio.css';
 import classnames from "classnames";
 
 
-const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutChange, selectedAboutCategory }) => {
+const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutChange, selectedAboutCategory, setGalleryPosition }) => {
   const location = useLocation(); // Get the current location
   const [isHidden, setIsHidden] = useState(true);
   const [headerTestHeight, setHeaderTestHeight] = useState(0);
@@ -23,7 +23,8 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
   const toggleHeader = () => {
     setIsHidden(!isHidden);
      updateHeaderHeight();
-    console.log(headerTestHeight);
+     setGalleryPosition(headerTestHeight); 
+      console.log(headerTestHeight);
   };
 
   function handleScrollChange() {
@@ -42,22 +43,19 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
       window.removeEventListener("scroll", handleScrollChange);
       window.removeEventListener('resize', updateHeaderHeight);
     };
-  }, []); // only add event listener on mount & clean on unmount
+  }, []); 
 
   const headerStyle = {
-    //  marginTop: !isHidden ? '0px' : null,
-      // top: isHidden ? 0 :  headerTestHeight 
       transform: `translateY(${isHidden ? 0 : headerTestHeight}px)`,
-      // backgroundColor: !isHidden && window.scrollY === 0 ? 'red' : 'blue',
-      marginTop: !isHidden && window.scrollY === 0 ? `0px` : null
+      // marginTop: !isHidden && window.scrollY === 0 ? `0px` : null
   };
 
-    const testStyle = {
-      // marginTop: isHidden && window.scrollY === 0 ? 0 : null
+  const testStyle = {
+    transform: `translateY(${isHidden ? 0 : headerTestHeight}px)`,
+    // marginTop: !isHidden && window.scrollY === 0 ? `0px` : null
+};
 
-  };
   return (
-    // <div className="background-container" style={headerStyle}>
     <header style={headerStyle}        
     className={classnames("header", {
         "hidden": isHidden
@@ -68,33 +66,26 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
             })}
       >
       <div className={`headerTop`}>
-      {/* <p>header top</p> */}
-        {/* <div className='containertest'> */}
-        {/* <p>containertest</p> */}
           <div 
               className={classnames("about-section", {
               "about-hidden": isHidden
             }) }>
-          <p>about-section</p>
-          <p>information about Lydia Graveline.</p>
-          <p>information about Lydia Graveline.</p>
-          <p>information about Lydia Graveline.</p>
-          <p>Contact</p>
-          <p>Contact</p>
-          {/* <p>Contact</p> */}
+          <p>My name is Lydia</p>
+          <a href="mailto:lydiagraveline20@gmail.com">lydiagraveline20@gmail.com</a> <br/>
+          <a href="https://www.instagram.com/pearl_diver_/" target="_blank">Instagram</a>
+
           </div>
-        {/* </div> */}
       </div>
       </div>
-      
-       {/* <p>header</p> */}
       <div className='headerBottom '  >
 
       <div className="header-left">
         <div id="logo">
         <Link to="/">Lydia Graveline</Link>
         </div>
-        <div id="category">
+      </div>
+
+      <div id="category" className="header-center">
         {location.pathname === '/' && ( // Conditionally render the radio buttons only when the path is '/'
         <GalleryFilter
          categories={categories}
@@ -102,48 +93,12 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
          onChange={handleFilterChange}
         />
       )}
-      {/* <button onClick={toggleHeader}>
-        {isHidden ? "Show Header" : "Hide Header"}
-      </button> */}
-      </div>
       </div>
       <div className="header-right">
       <Link to="#" onClick={() => {toggleHeader(); updateHeaderHeight();}}>About</Link>
       </div>  
       </div>
-
-        {/* {location.pathname === '/about' && ( // Conditionally render the radio buttons only when the path is '/'=
-          <div className='radioContainer'>
-          <ul>
-          <li>
-          <label className="radio-button">
-          <input type="radio" name="About" value="Bip" checked={selectedAboutCategory === 'Bio'} onChange={() => handleAboutChange('Bio')}></input>
-          <div className="radio-circle"></div>
-          <span>Bio</span>
-          </label>
-          </li>
- 
-          <li>
-          <label className="radio-button">
-          <input type="radio" name="About" value="Contact"checked={selectedAboutCategory === 'Contact'} onChange={() => handleAboutChange('Contact')}></input>
-          <div className="radio-circle"></div>
-          <span>Contact</span>
-          </label>
-          </li>
-          </ul>
-         </div>
-      )} */}
-
-
-
-      {/* <div className="header-right">
-        <Link to="/about">About</Link>
-      </div> */}
-
-
-
     </header>
-    //  </div>
   );
 };
 

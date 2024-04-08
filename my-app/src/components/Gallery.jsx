@@ -1,30 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import GalleryFilter from './GalleryFilter';
 
-const Gallery = ({ galleryData,  collection, handleFilterChange,  selectedCategory }) => {
+const Gallery = ({ galleryData,  collection, handleFilterChange,  selectedCategory}) => {
 //   const [data, setData] = useState([]);
 //   const [collection, setCollection] = useState([]);
   const [clickedImage, setClickedImage] = useState(null);
 //   const [selectedCategory, setSelectedCategory] = useState('all');
 
-//   useEffect(() => {
-//     setData(galleryData);
-//     setCollection([...new Set(galleryData.map((item) => item.category))]);
-//   }, [galleryData]);
-
-//   const handleFilterChange = (category) => {
-//     setSelectedCategory(category);
-//     if (category === 'all') {
-//       setData(galleryData);
-//     } else {
-//       const filteredData = galleryData.filter(item => item.category === category);
-//       setData(filteredData);
-//     }
-//   };
-
   const handleImageClick = (item) => {
     setClickedImage(item);
-    console.log(item.category);
+
   };
 
   const closeModal = () => {
@@ -36,7 +21,7 @@ const Gallery = ({ galleryData,  collection, handleFilterChange,  selectedCatego
 //   }));
 
   return (
-    <div className='gallery'>
+    <div className='gallery'  >
         {/* <GalleryFilter
         categories={['all', ...collection]}
          selectedCategory={selectedCategory}

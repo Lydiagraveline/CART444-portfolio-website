@@ -18,6 +18,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedAboutCategory, setSelectedAboutCategory] = useState('Bio');
   const [collection, setCollection] = useState([]);
+  const [galleryPosition, setGalleryPosition] = useState(0); // State for gallery position
 
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
 
   const handleFilterChange = (category) => {
     setSelectedCategory(category);
+    // console.log(galleryPosition)
     // Filter gallery data based on the selected category
     if (category === 'all') {
       const sortedData = sortedGalleryData();
@@ -54,11 +56,15 @@ function App() {
       handleFilterChange={handleFilterChange}
       handleAboutChange={handleAboutChange}
       selectedAboutCategory={selectedAboutCategory}
+      setGalleryPosition={setGalleryPosition}
     />
     
     <Routes>
 
-      <Route path="/" element={<Gallery galleryData={galleryData} collection={collection} />} /> {/* Default route to Gallery */}
+      <Route path="/" element={<Gallery 
+      galleryData={galleryData} 
+      collection={collection} 
+      />} /> {/* Default route to Gallery */}
       <Route path='/about' element={<About selectedCategory={selectedAboutCategory} />} />
     </Routes>
     </Router>
