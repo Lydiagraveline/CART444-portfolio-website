@@ -80,7 +80,7 @@ body {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 1;
+  /* z-index: 1; */
   letter-spacing: -0.03em;
   line-height: 1em;
   transition: all 1s ease-out;
@@ -272,29 +272,9 @@ em:hover{
 }
 
 
-
-
-
-/* header {
-  position: sticky;
-  top: 0;
-  display: flex; 
-  justify-content: center;
-  transform: translateX(-0.7em); 
-}
-
-header h1 {
-  margin: 0;
-  font-family: louise, sans-serif;
-  color: var(--purple2);
-  font-size: 4em;
-  white-space: nowrap;
-} */
-
-
 .gallery {
   /* margin-top:96px; */
-  background-color: var(--purple1);
+  background-color: var(--light2);
   /* padding: 10% 10%; */
 }
 
@@ -307,11 +287,21 @@ header h1 {
   /* grid-gap: 2em; */
    /* [1] Add some gap between rows and columns */
 
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-   grid-template-rows: masonry;
-  gap: 20px; /* Add some gap between items */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  /* grid-template-rows: masonry; */
+  gap: 45px; /* Add some gap between items */
+
+  /* padding: 10%; */
 }
+
+@media screen and (min-width: 32em) {
+  .gallery .container  {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
 
 .galleryItem {
   /* flex: 0 1 calc(33.33% - 20px); */
@@ -343,33 +333,47 @@ header h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  background-color: var(--purple1);
+  /* display: flex;
+  justify-content: center; 
+  align-items: center;  */
 }
 
 /* Modal content */
 .modalContent {
-  background-color: var(--purple1);
-  /* z-index: 20; */
-  padding: 20px;
-  /* border-radius: 8px; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Drop shadow effect */
-  max-width: 80%; /* Set maximum width */
-  max-height: calc(100vh - 40px); /* Set maximum height to 100% of viewport height minus padding */
-  overflow-y: auto; /* Enable vertical scrolling if modal content exceeds modal height */
+  /* background-color: var(--light1); */
+  border: 1px solid red;
+  z-index: 9999;
+  /* position: sticky; */
+  position: fixed;
+  top:0;
+  height: 100%;
+  width: 100%;
+  /* overflow-y: auto;  */
+  /* overflow-x: hidden; */
+  overflow:hidden;
 }
 
 /* Image in modal */
 .modalContent img {
-  max-width: 100%; /* Ensure image doesn't exceed modal width */
-  max-height: 80vh; /* Set maximum height to 80% of viewport height */
-  display: block; /* Center the image horizontally */
-  margin: 0 auto 20px; /* Center the image horizontally and add some bottom margin */
+  width: 100vw;
+  display: block; 
+  /* cursor: url(./x.svg), pointer !important; */
 }
 
 /* Art piece information */
+
+.artPieceInfo {
+  /* display: none; */
+  margin: 0;
+  /* border: 1px solid red; */
+  position: sticky;
+  width:100%;
+  /* height: 300px; */
+  bottom:0px;
+  background-color: var(--purple1);
+}
 
 .artPieceInfo h2 {
   /* font-size: 18px; */
@@ -380,13 +384,13 @@ header h1 {
   color: var(--dark3);
   /* font-size: 18px; */
   font-family: compagnon-medium, sans-serif;
-  padding: 0px;
-  margin: 0px;
+  /* padding: 0px;
+  margin: 0px; */
 }
 
 /* Project link button */
 .projectLinkButton {
-  background-color: #007bff; /* Blue color */
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -400,7 +404,7 @@ header h1 {
 
 /* Close button */
 .modalContent button {
-  margin-top: 16px;
+  /* margin-top: 16px; */
   /* border: none;
   background-color: transparent;
   color: #333;

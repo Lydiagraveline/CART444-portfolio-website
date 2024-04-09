@@ -23,11 +23,13 @@ export const GalleryData = [
             "link": "https://lydiagraveline.com/projects/bed/"
           },
           {
-            "title": "Untitled",
+            "title": "Flower Dyptich",
             "image": "flowerpainting.jpg",
             "category": "analog",
             "medium": "Oil",
-            "year": 2023
+            "year": 2023,
+            "folder":"flowerdyptich",
+            "photos": ['0.png', '1.png', '2.png']
           },
           {
             "title": "untitled",
@@ -66,7 +68,10 @@ export const GalleryData = [
             "image": "digitaldelights.png",
             "category": "digital",
             "link":"https://lydiagraveline.com/projects/digitaldelights/outer.html",
-            "medium": "HTML"
+            "medium": "HTML",
+            "folder": "digitaldelights",
+            "photos": ['0.png', '1.png', '2.png', '3.png']
+            
           },
           // {
           //   "title": "untitled",
