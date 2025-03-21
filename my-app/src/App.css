@@ -275,8 +275,9 @@ em:hover{
 .gallery {
   /* margin-top:96px; */
   background-color: var(--light2);
-  /* padding: 10% 10%; */
+  /* padding-top: 45px; */
 }
+
 
 .gallery .container {
   /* display:grid; */
@@ -286,32 +287,74 @@ em:hover{
   /* gap: 20px; */
   /* grid-gap: 2em; */
    /* [1] Add some gap between rows and columns */
-
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(333px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(333px, 1fr)); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-column-gap: 2.5px; */
   /* grid-template-rows: masonry; */
-  gap: 45px; /* Add some gap between items */
+  /* gap: 45px; */
 
   /* padding: 10%; */
 }
 
+
+@media screen and (max-width: 32em) {
+  .gallery  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 32em) and (max-width: 48em) {
+  .gallery .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (min-width: 32em) {
   .gallery .container  {
-    padding-left: 45px;
-    padding-right: 45px;
+    /* padding-left: 45px;
+    padding-right: 45px; */
   }
 }
 
 
 .galleryItem {
+  /* display: flex; 
+  flex-direction: column;
+  align-items: center;  */
   /* flex: 0 1 calc(33.33% - 20px); */
   background-color: var(--light1);
   border: solid 1.5px var(--dark3);
-  padding: 10px;
+  /* padding: 0px; */
+  /* height: 33vh;  */
+
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* Center items vertically */
   /*display: flex;
   flex-direction: column; */
   /* height: auto; */
 }
+
+@media screen and (max-width: 32em) {
+  .galleryItem  {
+    max-height: 80vh; 
+  }
+}
+
+@media screen and (min-width: 32em) and (max-width: 48em) {
+  .galleryItem  {
+    height: 40vh; 
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .galleryItem  {
+    height: 50vh;
+  }
+}
+
 
 .galleryItem p {
   font-family: compagnon-medium;
@@ -320,10 +363,11 @@ em:hover{
 }
 
 .galleryItem img{
-  display: block; /* Ensure images fill the available width */
+  display: block; 
   width: 100%;
-  /* height: auto; */
-  object-fit: cover;
+  height: auto;
+  object-fit: contain; /* Ensure the entire image fits within the container */
+  object-position: center; /* Center the image */
 }
 
 /* Modal background */
@@ -333,38 +377,53 @@ em:hover{
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
-  background-color: var(--purple1);
-  /* display: flex;
+  background-color: rgba(0, 0, 0, 0.5); 
+  /* background-color: var(--purple1); */
+  display: flex;
   justify-content: center; 
-  align-items: center;  */
+  align-items: center; 
 }
 
 /* Modal content */
 .modalContent {
-  /* background-color: var(--light1); */
-  border: 1px solid red;
+  background-color: var(--light1);
+  /* border: 1px solid red; */
   z-index: 9999;
   /* position: sticky; */
   position: fixed;
-  top:0;
-  height: 100%;
-  width: 100%;
+  /* top:0; */
+  /* height: 100%; */
+  max-width: 80%; /* Set maximum width */
+  max-height: calc(100vh - 40px); /* Set maximum height to 100% of 
+  /* padding: 20px; */
+  /* width: 100%; */
   /* overflow-y: auto;  */
   /* overflow-x: hidden; */
   overflow:hidden;
+  display: flex; /* Use flexbox */
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Image in modal */
 .modalContent img {
-  width: 100vw;
-  display: block; 
+  max-width: 100%; 
+  max-height: 80vh; 
+  /* padding: 10px; */
+  /* width: 100vw; */
+  /* max-width: 80vw; */
+  
+  /* height: 100vh; */
+  /* display: block;  */
   /* cursor: url(./x.svg), pointer !important; */
+  
 }
 
 /* Art piece information */
 
 .artPieceInfo {
+  padding: 10px;
   /* display: none; */
   margin: 0;
   /* border: 1px solid red; */

@@ -1,4 +1,26 @@
 export const GalleryData = [
+  {
+    "title": "orchid",
+    "year": 2024,
+    "image": "orchid.jpg",
+    "category": "analog",
+    "medium": "Oil on canvas",
+  },
+  {
+    "title": "Collage",
+    "year": 2024,
+    "image": "collage.png",
+    "category": "digital",
+    "medium": "Digital collage",
+  },
+  {
+    "title": "Still Life",
+    "year": 2024,
+    "image": "painting0.jpg",
+    "category": "analog",
+    "medium": "Oil on canvas",
+  },
+
         {
             "title": "Lily",
             "year": 2023,
@@ -14,6 +36,7 @@ export const GalleryData = [
             "category": "analog",
             "medium": "Oil on canvas",
           },
+          
           {
             "title": "Bed",
             "image": "bed.gif",
@@ -22,6 +45,7 @@ export const GalleryData = [
             "year": 2023,
             "link": "https://lydiagraveline.com/projects/bed/"
           },
+          
           {
             "title": "Flower Dyptich",
             "image": "flowerpainting.jpg",
@@ -31,6 +55,14 @@ export const GalleryData = [
             "folder":"flowerdyptich",
             "photos": ['0.png', '1.png', '2.png']
           },
+          {
+            "title": "Collage",
+            "year": 2023,
+            "image": "life.png",
+            "category": "digital",
+            "medium": "Digital collage",
+          },
+          
           {
             "title": "untitled",
             "year": 2023,
@@ -71,15 +103,29 @@ export const GalleryData = [
             "medium": "HTML",
             "folder": "digitaldelights",
             "photos": ['0.png', '1.png', '2.png', '3.png']
-            
           },
-          // {
-          //   "title": "untitled",
-          //   "image": "guy.jpg",
-          //   "category": "analog",
-          //   "medium": "oil paint",
-          //   "year": 2020
-          // },
+
+          {
+            "title": "Butterfly",
+            "image": "shapes.png",
+            "category": "analog",
+            "medium": "Illustration",
+            "year": 2021
+          },
+          {
+            "title": "Knot",
+            "image": "knot.png",
+            "category": "analog",
+            "medium": "Oil on canvas",
+            "year": 2020
+          },
+          {
+            "title": "Friend",
+            "image": "guy.jpg",
+            "category": "analog",
+            "medium": "oil paint",
+            "year": 2020
+          },
           // {
           //   "title": "Traces",
           //   "image": "print2.jpg",
@@ -115,13 +161,15 @@ export const GalleryData = [
             "medium": "gif",
             "year": 2022
           },
-          // {
-          //   "title": "Permutations",
-          //   "image": "gif0.gif",
-          //   "category": "digital",
-          //   "medium": "gif",
-          //   "year": 2023
-          // },
+          {
+            "title": "Permutations",
+            "image": "gif0.gif",
+            "category": "digital",
+            "medium": "gif",
+            "year": 2023,
+            "folder": "Permutations",
+            "photos": ['gif0.gif','gif1.gif','gif2.gif','gif3.gif','gif4.gif']
+          },
           // {
           //   "title": "Source",
           //   "image": "LaSource.jpg",
@@ -129,6 +177,7 @@ export const GalleryData = [
           //   "medium": "Oil on canvas",
           //   "year": 2020
           // },
+
           // {
           //   "title": "Honey",
           //   "image": "honey.JPG",
@@ -136,11 +185,11 @@ export const GalleryData = [
           //   "medium": "Oil on canvas",
           //   "year": 2020
           // },
-          {
-            "title": "Tsunami",
-            "image": "Tsunami.jpg",
-            "category": "analog",
-            "medium": "Etching",
-            "year": 2019
-          },
+          // {
+          //   "title": "Tsunami",
+          //   "image": "tsunami.jpg",
+          //   "category": "analog",
+          //   "medium": "Etching",
+          //   "year": 2019
+          // },
 ]

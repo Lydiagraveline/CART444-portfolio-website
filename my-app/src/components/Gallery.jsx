@@ -57,7 +57,7 @@ const Gallery = ({ galleryData,  collection, handleFilterChange,  selectedCatego
             {!item.folder && (
               <img src={`../images/${item.image}`} alt={item.title} />
             )}
-            <p>{item.medium}</p>
+            {/* <p>{item.medium}</p> */}
           </div>
         )}
       </div>
