@@ -70,12 +70,19 @@ const Header = ({ categories, selectedCategory, handleFilterChange, handleAboutC
               className={classnames("about-section", {
               "about-hidden": isHidden
             }) }>
-          <p>My name is Lydia</p>
-          <a href="mailto:lydiagraveline20@gmail.com">lydiagraveline20@gmail.com</a> <br/>
-          <a href="https://www.instagram.com/pearl_diver_/" target="_blank">Instagram</a>
-
-          </div>
+            <div className="profilePic">
+              <img src="/images/profile.png" alt="Lydia Graveline" />
+            </div>
+            <div className="bio">
+              <p>Visual Artist, designer, sound artist, and DJ. Originally from Baltimore Maryland, now based in Montreal, where I’m completing a BFA in Computation Arts at Concordia (graduating in 2025).</p>
+              <div className="contact"> 
+                <a href="mailto:lydiagraveline20@gmail.com">lydiagraveline20@gmail.com</a> <br/>
+                <a href="https://www.instagram.com/lydiote___/" target="_blank">Instagram</a>
+              </div>
+            </div>
+            </div>
       </div>
+      {/* <img src="/images/profile.png" alt="Lydia Graveline" /> */}
       </div>
       <div className='headerBottom '  >
 

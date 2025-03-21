@@ -1,5 +1,35 @@
 export const GalleryData = [
   {
+    "title": "Tulip Prints",
+    "year": 2024,
+    "category": "digital",
+    "medium": "Polycam, Photoshop",
+    "folder": "tulipPrints",
+    "photos": ['01.jpg','02.jpg','03.jpg'],
+    "description": "Four digital images, printed on smooth fine art paper,  17x22inches each."
+  },
+
+  {
+    "title": "Pixel Paintings",
+    "year": 2024,
+    // "image": "MeetingThrough/BW.png",
+    "category": "digital",
+    "medium": "Polycam, TouchDesigner, Photoshop",
+    "folder": "PixelPaintings",
+    "photos": ['01.jpg','02.jpg','03.jpg','04.jpg'],
+    "description": "Four digital images, printed on smooth fine art paper, 18x24inch each."
+  },
+  {
+    "title": "Meeting Through",
+    "year": 2024,
+    "image": "MeetingThrough/BW.png",
+    "category": "digital",
+    "medium": "Web design and creation",
+    // "folder": "MeetingThrough",
+    // "photos": ['ezgif-7.gif','BW.png', 'wireGif.gif', 'enGif.gif'],
+    "link": "https://liliamestre.com/meeting-through/"
+  },
+  {
     "title": "orchid",
     "year": 2024,
     "image": "orchid.jpg",
@@ -13,14 +43,13 @@ export const GalleryData = [
     "category": "digital",
     "medium": "Digital collage",
   },
-  {
-    "title": "Still Life",
-    "year": 2024,
-    "image": "painting0.jpg",
-    "category": "analog",
-    "medium": "Oil on canvas",
-  },
-
+  // {
+  //   "title": "Still Life",
+  //   "year": 2024,
+  //   "image": "painting0.jpg",
+  //   "category": "analog",
+  //   "medium": "Oil on canvas",
+  // },
         {
             "title": "Lily",
             "year": 2023,
@@ -105,27 +134,27 @@ export const GalleryData = [
             "photos": ['0.png', '1.png', '2.png', '3.png']
           },
 
-          {
-            "title": "Butterfly",
-            "image": "shapes.png",
-            "category": "analog",
-            "medium": "Illustration",
-            "year": 2021
-          },
-          {
-            "title": "Knot",
-            "image": "knot.png",
-            "category": "analog",
-            "medium": "Oil on canvas",
-            "year": 2020
-          },
-          {
-            "title": "Friend",
-            "image": "guy.jpg",
-            "category": "analog",
-            "medium": "oil paint",
-            "year": 2020
-          },
+          // {
+          //   "title": "Butterfly",
+          //   "image": "shapes.png",
+          //   "category": "analog",
+          //   "medium": "Illustration",
+          //   "year": 2021
+          // },
+          // {
+          //   "title": "Knot",
+          //   "image": "knot.png",
+          //   "category": "analog",
+          //   "medium": "Oil on canvas",
+          //   "year": 2020
+          // },
+          // {
+          //   "title": "Friend",
+          //   "image": "guy.jpg",
+          //   "category": "analog",
+          //   "medium": "oil paint",
+          //   "year": 2020
+          // },
           // {
           //   "title": "Traces",
           //   "image": "print2.jpg",
@@ -133,13 +162,13 @@ export const GalleryData = [
           //   "medium": "Image transfer on plexiglass",
           //   "year": 2020
           // },
-          {
-            "title": "untitled",
-            "image": "print1.jpg",
-            "category": "analog",
-            "medium": "Lino print",
-            "year": 2020
-          },
+          // {
+          //   "title": "untitled",
+          //   "image": "print1.jpg",
+          //   "category": "analog",
+          //   "medium": "Lino print",
+          //   "year": 2020
+          // },
           {
             "title": "Shrine",
             "image": "shrine.jpg",

@@ -69,7 +69,6 @@ body {
   font-family: compagnon-roman;
 }
 
-
 .header {
   background-color: var(--light1);
   flex-direction: column;
@@ -85,6 +84,7 @@ body {
   line-height: 1em;
   transition: all 1s ease-out;
   font-size: var(--minFontSize);
+  border-bottom: 1.5px solid var(--dark3);
   /* transition: margin 500ms ease 0s; */
   
 }
@@ -110,50 +110,45 @@ body {
 
 
 .headerTop{
-  /* height: auto; */
-  /* border: 1.5px solid red; */
   /* background-color: #007bff; */
-  /* height: 10px; */
-  /* height: 100%; */
-  /* width: 100%; */
-  /* bottom: 100%; */
-  /* position: absolute; */
-  /* display: flex; */
-  /* flex-direction: column; */
   /* border: 1.5px solid var(--dark3); */
   padding-left: 15px;
   padding-right: 15px;
   margin: 1%;
-  /* padding: 10px; */
+  padding: 10px;
 }
 
 
 @media screen and (min-width: 32em) {
   .headerTop {
-    padding-left: 45px;
-    padding-right: 45px;
+    /* padding-left: 45px; */
+    /* padding-right: 45px; */
   }
 }
 
 @media screen and (min-width: 48em) {
   .headerTop {
-    padding-right: 45px;
+    /* padding-right: 45px; */
   }
 }
 
 @media screen and (min-width: 64em) {
   .headerTop {
-    padding-left: 0px;
-    margin-left: 50%;
-    width: 50%;
+    /* padding-left: 0px; */
+    /* margin-left: 25%; */
+    /* width: 25%; */
   }
 }
 
 .about-section{
-  margin: 10px;
+  /* margin: 10px; */
   /* border: 1.5px solid var(--dark3); */
-  padding: 10px;
+  /* padding: 10px; */
   transition: all 0.6s ease-in-out;
+  display: flex; /* make the .about-section div a flex container */
+  flex-direction: row; /* set the flex direction to row */
+   /* align-items: flex-end;  */
+  justify-content: space-between; /* align items to the left and right of the container */
 }
 
 .about-section a{
@@ -176,6 +171,66 @@ body {
   color: var(--light1);
 }
 
+ .bio{
+  /* border: 1.5px solid var(--dark3); */
+  padding: 10px;
+  margin-left: 10px;
+  
+  /* flex-grow: 0; */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.bio p{
+  margin: 0;
+}
+
+@media screen and (min-width: 64em) {
+  .bio {
+    padding-left: 0px;
+    flex-basis: 56%;
+    /* margin-left: 50%; */
+    /* width: 50%; */
+  }
+}
+
+.contact {
+  margin-top: 20px;
+  /* margin-bottom: 50px; */
+}
+
+.profilePic{
+  border: 1.5px solid var(--dark3);
+  object-fit: cover; 
+}
+
+.profilePic img{
+  object-fit: cover; /* apply object-fit to the img element */
+  height: 100%; /* set the height to 100% to maintain aspect ratio */
+  width: 100%; /* set the width to 100% to fill the container */
+}
+
+
+@media screen and (min-width: 32em) {
+  .profilePic img {
+    flex-basis: 50%;
+    /* padding-left: 45px;  */
+    /* padding-right: 45px; */
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .profilePic {
+    /* width: 10px; */
+    flex-basis: 20%; /* set the flex basis to 50% */
+    /* padding-left: 0px; */
+    /* margin-left: 25%; */
+    /* width: 50%; */
+  }
+}
+
+
 .headerBottom {
   display: flex;
   flex-direction: row;
@@ -188,7 +243,7 @@ body {
   line-height: 1em;
   pointer-events: auto;
   height: 50px;
- 
+ /* background-color: aqua; */
 
 }
 
